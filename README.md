@@ -14,7 +14,7 @@ Need to evaluate & cross reference the parquet files against the unique ids to v
 
 Need to determine how we will generate sii for the training data missing sii values. Either that or we cut the missing ids and run training on the set that has sii measurements. We can train models on either approach and see the results.
 
-If we "generate" sii datapoints for a part of the training set, we cannot utilize those "generated" datapoints for evaluation in our testing set. Oftentimes, we split the training set to produce testing sets via cross-validation, but this is not performable or feasible for "generated" datapoints.
+If we "generate" sii datapoints for a part of the training set, we cannot utilize those "generated" datapoints for evaluation in our testing set. Oftentimes, we split the training set to produce testing sets via cross-validation, but this is not performable or feasible for "generated" datapoints. So, if we generate sii values, we separate the datapoints and only use them for training purposes. We can also use this approach to potentially improve our datapoint generation abilities.
 
 Need to open up a few parquet files and do a basic lookover to see what we're working with.
 
