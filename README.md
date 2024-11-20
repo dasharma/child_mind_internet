@@ -8,6 +8,19 @@ Notes:
 - 3960 unique ids in train.csv
 - Have not yet opened the parquet files to examine what's in them.
 - Parquet directory folders for training are massive (more than 6 gb)
+        - recommend manual download for parquet file and set up the container folders to be ignored
+        - recommended directory setup:
+
+        /child_mind_internet/
+                /series_test.parquet/
+                        /id=.../
+
+                /series_train.parquet/
+                        /id=.../
+
+                ... rest will be part of github repo, uploaded
+
+                
 - Test data csv isn't actually a test csv, we will have to generate our own test dataframe for predictions from the training set.
 
 Need to evaluate & cross reference the parquet files against the unique ids to verify which children have parquet data.
@@ -25,3 +38,8 @@ Once we begin working with the data, we can utilize separate branches to try dif
 Useful discussion links from Kaggle:
 
 https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/discussion/546266
+
+Neat stuff to read later:
+
+https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/
+
